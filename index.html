@@ -1,0 +1,2193 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+    <style>
+        .slide-item {
+            max-width: 374px;
+            max-height: 212px;
+        }
+
+        .slide-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .pagination-none {
+            display: none;
+        }
+
+        .follow__slide-img {
+            width: 211px;
+            height: 252px;
+        }
+
+        .swiper-button-next {
+            color: #fff;
+        }
+
+        .swiper-button-prev {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <div class="btn-show-sidebar-tablet">
+                <i class="ti-menu btn-show-sidebar"></i>
+                <i class="ti-close btn-close-sidebar"></i>
+            </div>
+            <div class="header__search">
+                <span class="header__search-icon">
+                    <i class="ti-search"></i>
+                </span>
+                <input type="text" class="header__search-input" placeholder="Nhập tên bài hát, nghệ sĩ hoặc MV...">
+            </div>
+            <div class="header__control">
+                <div class="btn-control header__control-theme">
+                    <i class="ti-palette"></i>
+                </div>
+                <div class="btn-control header__up-load">
+                    <i class="ti-export"></i>
+                    <input type="file" class="up-file">
+                </div>
+                <div class="btn-control header__user">
+                    <img class="header__user-img" src="./assets/img/user_avt.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="sidebar" class="sidebar active">
+            <div class="nav">
+                <div class="nav__label-logo">
+                    <img class="nav_label-logo_img" src="https://static-zmp3.zadn.vn/zmp3_rpt/images/logo-mp3.svg"
+                        alt="" srcset="">
+                </div>
+                <div class="nav__sidebar-items">
+                    <ul class="nav__list-item">
+                        <li class="nav__item">
+                            <a class="nav__item-link" href="#">
+                                <i class="nav__icon ti-music-alt"></i>
+                                Cá Nhân
+                            </a>
+                        </li>
+                        <li class="nav__item active">
+                            <a class="nav__item-link" href="#">
+                                <i class="nav__icon ti-control-record"></i>
+                                Khám Phá
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__item-link" href="#">
+                                <i class="nav__icon ti-bar-chart"></i>
+                                #zingchart
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__item-link" href="#">
+                                <i class="nav__icon ti-face-smile"></i>
+                                Radio
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__item-link" href="#">
+                                <i class="nav__icon ti-rss"></i>
+                                Theo Dõi
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="nav__line"></div>
+                    <div class="nav__sidebar-scroller">
+                        <ul class="nav__sidebar-scroller_list">
+                            <li class="nav__sidebar-scroller_item">
+                                <a class="nav__scroller-item-link" href="#">
+                                    <i class="nav__icon ti-music-alt"></i>
+                                    Nhạc Mới
+                                </a>
+                            </li>
+                            <li class="nav__sidebar-scroller_item">
+                                <a class="nav__scroller-item-link" href="#">
+                                    <i class="nav__icon ti-layout-grid2"></i>
+                                    Thể Loại
+                                </a>
+                            </li>
+                            <li class="nav__sidebar-scroller_item">
+                                <a class="nav__scroller-item-link" href="#">
+                                    <i class="nav__icon ti-star"></i>
+                                    Top 100
+                                </a>
+                            </li>
+                            <li class="nav__sidebar-scroller_item">
+                                <a class="nav__scroller-item-link" href="#">
+                                    <i class="nav__icon ti-desktop"></i>
+                                    MV
+                                </a>
+                            </li>
+                            <li class="nav__sidebar-scroller_item nav__sidebar-scroller_item-scroller">
+                                <a class="nav__scroller-item-link nav__scroller-item-link-srcoll" href="#">
+                                    THƯ VIỆN
+                                    <i class="ti-pencil icon-edit"></i>
+                                </a>
+                                <ul class="nav_sidebar-scroller--sub">
+                                    <li class="nav__srcoller-sub-item">
+                                        <img src="https://zjs.zadn.vn/zmp3-desktop/releases/v1.0.13/static/media/my-song.cf0cb0b4.svg"
+                                            alt="">
+                                        <a href="#" class="nav__srcoller-sub-item-link" class>Bài hát</a>
+                                    </li>
+                                    <li class="nav__srcoller-sub-item">
+                                        <img src="https://zjs.zadn.vn/zmp3-desktop/releases/v1.0.13/static/media/my-playlist.7e92a5f0.svg"
+                                            alt="">
+                                        <a href="#" class="nav__srcoller-sub-item-link" class>Playlist</a>
+                                    </li>
+                                    <li class="nav__srcoller-sub-item">
+                                        <img src="https://zjs.zadn.vn/zmp3-desktop/releases/v1.0.13/static/media/my-history.374cb625.svg"
+                                            alt="">
+                                        <a href="#" class="nav__srcoller-sub-item-link" class>Gần đây</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav__sidebar-create">
+                    <a href="" class="nav__sidebar-create-link">
+                        <i class="icon-create ti-plus"></i>
+                        Tạo playlist mới
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container active">
+            <div class="container__page-user container-page">
+                <div class="profile-user">
+                    <div class="profile__user-item">
+                        <div class="profile__user-item--avt">
+                            <img src="./assets/img/user_avt.jpg" alt="">
+                        </div>
+                        <div class="profile__user-item--name">
+                            <h3>Hoàng Trần</h3>
+                        </div>
+                    </div>
+                    <div class="profile__user-nav">
+                        <ul class="profile__user-nav-list">
+                            <li class="profile__user-nav-item active">
+                                TỔNG QUAN
+                            </li>
+                            <li class="profile__user-nav-item">
+                                BÀI HÁT
+                            </li>
+                            <li class="profile__user-nav-item">
+                                PLAYLIST
+                            </li>
+                            <li class="profile__user-nav-item">
+                                NGHỆ SĨ
+                            </li>
+                            <li class="profile__user-nav-item">
+                                ALBUM
+                            </li>
+                            <li class="profile__user-nav-item">
+                                MV
+                            </li>
+                            <li class="profile__user-nav-item">
+                                TẢI LÊN
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container-item active">
+                    <div class="container_songs">
+                        <h3 class="container_songs-heading">Bài Hát <span class="icon__angle-right"><i class="ti-angle-right"></i></span></h3>
+                        <div class="grid container_songs-body">
+                            <div class="row list-song">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-item active">
+                    <div class="container_playlist">
+                        <h3 class="container_playlist-heading">Playlist <span class="icon__angle-right"><i
+                                    class="ti-angle-right"></i></span></h3>
+                        <div class="grid">
+                            <div class="row">
+                                <div class="col l-2-4 m-6 c-12">
+                                    <div class="product-block playlist-item playlist-item--create">
+                                        <span class="playlist-item__create-icon"><i class="ti-plus"></i></span>
+                                        <p class="playlist-item__create-desc">Tạo playlist mới</p>
+                                    </div>
+                                </div>
+                                <div class="col l-2-4 m-6 c-12">
+                                    <div class="playlist-item product-block">
+                                        <div class="product__block-img playlist__item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/playlist_img1.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="product__block-name-link">4U - On Repeat</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2-4 m-6 c-12">
+                                    <div class="playlist-item product-block">
+                                        <div class="product__block-img playlist__item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/playlist_img2.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="product__block-name-link">Nhạc Việt Hot Tháng 9/2021</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-item">
+                    <div class="container_singer">
+                        <img class="container__singer-img"
+                            src="https://zjs.zadn.vn/zmp3-desktop/releases/v1.3.1/static/media/artist-icon.0b64fd14.svg"
+                            alt="">
+                        <span class="container__singer-desc">
+                            Không có Nghệ Sĩ trong thư viện cá nhân
+                        </span>
+                    </div>
+                </div>
+                <div class="container-item">
+                    <div class="container_album">
+                        <img class="container__album-img"
+                            src="https://zjs.zadn.vn/zmp3-desktop/releases/v1.3.10/static/media/dics-music-icon.3925fc01.svg"
+                            alt="">
+                        <span class="container__album-desc">
+                            Không có Album trong thư viện cá nhân
+                        </span>
+                    </div>
+                </div>
+                <div class="container-item">
+                    <div class="container_mv">
+                        <img class="container__mv-img"
+                            src="https://zjs.zadn.vn/zmp3-desktop/releases/v1.3.10/static/media/video-icon.09654360.svg"
+                            alt="">
+                        <span class="container__mv-desc">
+                            Không có MV trong thư viện cá nhân
+                        </span>
+                    </div>
+                </div>
+                <div class="container-item">
+                    <div class="container_upload">
+                        <img class="container__upload-img"
+                            src="	https://zjs.zadn.vn/zmp3-desktop/releases/v1.3.10/static/media/music-icon.cfa4aa91.svg"
+                            alt="">
+                        <span class="container__singer-desc">
+                            Không có bài hát tải lên
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="container__page-discover container-page active">
+                <div class="slide">
+                    <div class="swiper mySwiper-1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slide-item">
+                                <img src="./assets/img/slide1.jpg" />
+                            </div>
+                            <div class="swiper-slide slide-item">
+                                <img src="./assets/img/slide2.jpg" />
+                            </div>
+                            <div class="swiper-slide slide-item">
+                                <img src="./assets/img/slide3.jpg" />
+                            </div>
+                            <div class="swiper-slide slide-item">
+                                <img src="./assets/img/slide4.jpg" />
+                            </div>
+                            <div class="swiper-slide slide-item">
+                                <img src="./assets/img/slide5.jpg" />
+                            </div>
+                        </div>
+                        <div class="swiper-pagination pagination-none"></div>
+                    </div>
+                </div>
+                <div class="container__page-discover-body">
+                    <div class="block__recently-listened">
+                        <h3 class="block__recently-listened-heading">Nghe Gần Đây <span class="icon__angle-right"><i
+                                    class="ti-angle-right"></i></span></h3>
+                        <div class="grid">
+                            <div class="row container__page-discover-body--list-item">
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="product-block recently__listened-item">
+                                        <div class="product__block-img recently__listened-item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/recently_listened1.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="recently__listened-item-name-link">Người Việt Nam</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="product-block recently__listened-item">
+                                        <div class="product__block-img recently__listened-item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/playlist_img1.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="recently__listened-item-name-link">#ZINGCHART</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="product-block recently__listened-item">
+                                        <div class="product__block-img recently__listened-item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/recently_listened3.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="recently__listened-item-name-link">EDM Roadtrip</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="product-block recently__listened-item">
+                                        <div class="product__block-img recently__listened-item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/recently_listened4.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="recently__listened-item-name-link">Những Bài Hát Hay Nhất
+                                                Của Thùy Chi</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="product-block recently__listened-item">
+                                        <div class="product__block-img recently__listened-item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/recently_listened5.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="recently__listened-item-name-link">Indie Việt</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block__music-for-you">
+                        <h3 class="block__music-for-you-heading">Âm Nhạc Dành Cho Bạn <span class="icon__angle-right"><i
+                                    class="ti-angle-right"></i></span></h3>
+                        <div class="grid">
+                            <div class="row  container__page-discover-body--list-item">
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="product-block music-for-you-item">
+                                        <div class="product__block-img music-for-you-item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/playlist_img2.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="music-for-you-item-name-link">Những Bài Hát Dành Cho Tuổi
+                                                Trẻ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="product-block music-for-you-item">
+                                        <div class="product__block-img music-for-you-item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/for_you2.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="music-for-you-item-name-link">Hòa Tấu V-Pop</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="product-block music-for-you-item-item">
+                                        <div class="product__block-img music-for-you-item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/for_you3.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="music-for-you-item-name-link">Nhạc Việt Được Nghe Nhiều
+                                                Nhất</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="product-block music-for-you-item">
+                                        <div class="product__block-img music-for-you-item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/for_you4.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="music-for-you-item-name-link">HIT MAKER: Nổi Bật!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="product-block music-for-you-item">
+                                        <div class="product__block-img music-for-you-item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/for_you5.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="music-for-you-item-name-link">V-Pops: 100 Hits Thập
+                                                Niên</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block__radio">
+                        <h3 class="block__radio-heading">Radio Nổi Bật <span class="icon__angle-right"><i
+                                    class="ti-angle-right"></i></span></h3>
+                        <div class="grid">
+                            <div class="row container__page-discover-body--list-item">
+                                <div class="col l-2 m-4 c-6">
+                                    <div class="radio__item">
+                                        <div class="radio__item-img">
+                                            <div class="radio__item-img-layout-1">
+                                                <img src="./assets/img/radio_1.jpg" alt="">
+                                            </div>
+                                            <div class="radio__item-img-layout-2">
+                                                <div class="radio__item-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="radio__item-name">
+                                            <a href="#" class="music-for-you-item-name-link">Xone Radio</a>
+                                            <p>932 đang nghe</p>
+                                        </div>
+                                        <div class="radio__item-live">
+                                            <span>LIVE</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-4 c-6">
+                                    <div class="radio__item">
+                                        <div class="radio__item-img">
+                                            <div class="radio__item-img-layout-1">
+                                                <img src="./assets/img/radio_2.jpg" alt="">
+                                            </div>
+                                            <div class="radio__item-img-layout-2">
+                                                <div class="radio__item-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="radio__item-name">
+                                            <a href="#" class="music-for-you-item-name-link">On Air</a>
+                                            <p>71 đang nghe</p>
+                                        </div>
+                                        <div class="radio__item-live">
+                                            <span>LIVE</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-4 c-6">
+                                    <div class="radio__item">
+                                        <div class="radio__item-img">
+                                            <div class="radio__item-img-layout-1">
+                                                <img src="./assets/img/radio_3.jpg" alt="">
+                                            </div>
+                                            <div class="radio__item-img-layout-2">
+                                                <div class="radio__item-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="radio__item-name">
+                                            <a href="#" class="music-for-you-item-name-link">Chạm</a>
+                                            <p>326 đang nghe</p>
+                                        </div>
+                                        <div class="radio__item-live">
+                                            <span>LIVE</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-4 c-6">
+                                    <div class="radio__item">
+                                        <div class="radio__item-img">
+                                            <div class="radio__item-img-layout-1">
+                                                <img src="./assets/img/radio_4.jpg" alt="">
+                                            </div>
+                                            <div class="radio__item-img-layout-2">
+                                                <div class="radio__item-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="radio__item-name">
+                                            <a href="#" class="music-for-you-item-name-link">V-POP</a>
+                                            <p>650 đang nghe</p>
+                                        </div>
+                                        <div class="radio__item-live">
+                                            <span>LIVE</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-4 c-6">
+                                    <div class="radio__item">
+                                        <div class="radio__item-img">
+                                            <div class="radio__item-img-layout-1">
+                                                <img src="./assets/img/radio_5.jpg" alt="">
+                                            </div>
+                                            <div class="radio__item-img-layout-2">
+                                                <div class="radio__item-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="radio__item-name">
+                                            <a href="#" class="music-for-you-item-name-link">Bolero</a>
+                                            <p>200 đang nghe</p>
+                                        </div>
+                                        <div class="radio__item-live">
+                                            <span>LIVE</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-4 c-6">
+                                    <div class="radio__item">
+                                        <div class="radio__item-img">
+                                            <div class="radio__item-img-layout-1">
+                                                <img src="./assets/img/radio_6.jpg" alt="">
+                                            </div>
+                                            <div class="radio__item-img-layout-2">
+                                                <div class="radio__item-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="radio__item-name">
+                                            <a href="#" class="music-for-you-item-name-link">US-UK</a>
+                                            <p>143 đang nghe</p>
+                                        </div>
+                                        <div class="radio__item-live">
+                                            <span>LIVE</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block__top-100">
+                        <h3 class="block__top-100-heading">Top 100 <span class="icon__angle-right"><i
+                                    class="ti-angle-right"></i></span></h3>
+                        <div class="grid">
+                            <div class="row container__page-discover-body--list-item">
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="product-block top-100-item">
+                                        <div class="product__block-img top-100-item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/top100_1.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="top-100-item-name-link">Top 100 Nhạc V-Pop Hay Nhất</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="product-block top-100-item">
+                                        <div class="product__block-img top-100-item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/top100_2.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="top-100-item-name-link">Top 100 Nhạc Rap VN Hay Nhất</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="product-block top-100-item">
+                                        <div class="product__block-img top-100-item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/top100_3.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="top-100-item-name-link">Top 100 Nhạc EDM Hay Nhất</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="product-block top-100-item">
+                                        <div class="product__block-img top-100-item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/top100_4.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="top-100-item-name-link">Top 100 Nhạc Quê Hương Hay
+                                                Nhất</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <div class="product-block top-100-item">
+                                        <div class="product__block-img top-100-item-img">
+                                            <div class="product__block-img-layout-1">
+                                                <img src="./assets/img/top100_5.jpg" alt="">
+                                            </div>
+                                            <div class="product__block-img-layout-2">
+                                                <div class="product__block-img-layout-2--heart">
+                                                    <i class="ti-heart icon-heart"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--play">
+                                                    <i class="ti-control-play"></i>
+                                                </div>
+                                                <div class="product__block-img-layout-2--more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__block-name">
+                                            <a href="#" class="top-100-item-name-link">Top 100 Bài Hát Nhạc Trẻ Hay
+                                                Nhất</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__page-zingchart container-page">
+                <div class="container__page-zingchart-top-day">
+                    <h3 class="top__day-heading">#zingchart <span><i class="ti-control-play"></i></span></h3>
+                    <div class="block-chart">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <ul class="top__day-list">
+                        <li class="top__day-item">
+                            <div class="top__day-item-layout-1">
+                                <div class="top__day-item-left">
+                                    <p class="top__day-item-left-num color-top-1">1</p>
+                                    <span class="top__day-item-left-line">
+                                        <i class="ti-minus"></i>
+                                    </span>
+                                    <div class="top__day-item-left-body">
+                                        <div class="top__day-item-left-body-img">
+                                            <img src="./assets/img/top-1-date.jpg" alt="">
+                                            <div class="top__day-item-layout-2">
+                                                <i class="ti-control-play"></i>
+                                            </div>
+                                        </div>
+                                        <div class="top__day-item-left-body-name">
+                                            <h4>Rồi Tới Luôn</h4>
+                                            <p>Nal</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="top__day-item-center">
+                                    <span class="top__day-item-center-time">04:07</span>
+                                </div>
+                                <div class="top__day-item-right">
+                                    <div class="top__day-item-right-mic">
+                                        <i class="ti-microphone"></i>
+                                    </div>
+                                    <div class="top__day-item-right-heart">
+                                        <i class="ti-heart"></i>
+                                    </div>
+                                    <div class="top__day-item-right-more">
+                                        <i class="ti-more-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="top__day-item">
+                            <div class="top__day-item-layout-1">
+                                <div class="top__day-item-left">
+                                    <div class="block__top-day-item-left-num">
+                                        <p class="top__day-item-left-num color-top-2">2</p>
+                                    </div>
+                                    <span class="top__day-item-left-line">
+                                        <i class="ti-minus"></i>
+                                    </span>
+                                    <div class="top__day-item-left-body">
+                                        <div class="top__day-item-left-body-img">
+                                            <img src="./assets/img/top-2-date.jpg" alt="">
+                                            <div class="top__day-item-layout-2">
+                                                <i class="ti-control-play"></i>
+                                            </div>
+                                        </div>
+                                        <div class="top__day-item-left-body-name">
+                                            <h4>Người Lạ Thoáng Qua</h4>
+                                            <p>Đinh Tùng Huy</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="top__day-item-center">
+                                    <span class="top__day-item-center-time">04:45</span>
+                                </div>
+                                <div class="top__day-item-right">
+                                    <div class="top__day-item-right-mic">
+                                        <i class="ti-microphone"></i>
+                                    </div>
+                                    <div class="top__day-item-right-heart">
+                                        <i class="ti-heart"></i>
+                                    </div>
+                                    <div class="top__day-item-right-more">
+                                        <i class="ti-more-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="top__day-item">
+                            <div class="top__day-item-layout-1">
+                                <div class="top__day-item-left">
+                                    <p class="top__day-item-left-num color-top-3">3</p>
+                                    <span class="top__day-item-left-line">
+                                        <i class="ti-minus"></i>
+                                    </span>
+                                    <div class="top__day-item-left-body">
+                                        <div class="top__day-item-left-body-img">
+                                            <img src="./assets/img/top-3-date.jpg" alt="">
+                                            <div class="top__day-item-layout-2">
+                                                <i class="ti-control-play"></i>
+                                            </div>
+                                        </div>
+                                        <div class="top__day-item-left-body-name">
+                                            <h4>Khuê Mộc Lan</h4>
+                                            <p>Hương Ly, Jombie</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="top__day-item-center">
+                                    <span class="top__day-item-center-time">03:26</span>
+                                </div>
+                                <div class="top__day-item-right">
+                                    <div class="top__day-item-right-mic">
+                                        <i class="ti-microphone"></i>
+                                    </div>
+                                    <div class="top__day-item-right-heart">
+                                        <i class="ti-heart"></i>
+                                    </div>
+                                    <div class="top__day-item-right-more">
+                                        <i class="ti-more-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="top__day-item">
+                            <div class="top__day-item-layout-1">
+                                <div class="top__day-item-left">
+                                    <p class="top__day-item-left-num">4</p>
+                                    <span class="top__day-item-left-line">
+                                        <i class="ti-minus"></i>
+                                    </span>
+                                    <div class="top__day-item-left-body">
+                                        <div class="top__day-item-left-body-img">
+                                            <img src="./assets/img/top-4-date.jpg" alt="">
+                                            <div class="top__day-item-layout-2">
+                                                <i class="ti-control-play"></i>
+                                            </div>
+                                        </div>
+                                        <div class="top__day-item-left-body-name">
+                                            <h4>Yêu Là Cưới</h4>
+                                            <p>Phát Hồ, X2X</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="top__day-item-center">
+                                    <span class="top__day-item-center-time">02:59</span>
+                                </div>
+                                <div class="top__day-item-right">
+                                    <div class="top__day-item-right-mic">
+                                        <i class="ti-microphone"></i>
+                                    </div>
+                                    <div class="top__day-item-right-heart">
+                                        <i class="ti-heart"></i>
+                                    </div>
+                                    <div class="top__day-item-right-more">
+                                        <i class="ti-more-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="top__day-item">
+                            <div class="top__day-item-layout-1">
+                                <div class="top__day-item-left">
+                                    <div class="block__top-day-item-left-num">
+                                        <p class="top__day-item-left-num">5</p>
+                                    </div>
+                                    <span class="top__day-item-left-line">
+                                        <i class="ti-minus"></i>
+                                    </span>
+                                    <div class="top__day-item-left-body">
+                                        <div class="top__day-item-left-body-img">
+                                            <img src="./assets/img/top-5-date.jpg" alt="">
+                                            <div class="top__day-item-layout-2">
+                                                <i class="ti-control-play"></i>
+                                            </div>
+                                        </div>
+                                        <div class="top__day-item-left-body-name">
+                                            <h4>Thương Nhau Tới Bến</h4>
+                                            <p>Nal</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="top__day-item-center">
+                                    <span class="top__day-item-center-time">04:55</span>
+                                </div>
+                                <div class="top__day-item-right">
+                                    <div class="top__day-item-right-mic">
+                                        <i class="ti-microphone"></i>
+                                    </div>
+                                    <div class="top__day-item-right-heart">
+                                        <i class="ti-heart"></i>
+                                    </div>
+                                    <div class="top__day-item-right-more">
+                                        <i class="ti-more-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="top__day-item">
+                            <div class="top__day-item-layout-1">
+                                <div class="top__day-item-left">
+                                    <p class="top__day-item-left-num">6</p>
+                                    <span class="top__day-item-left-line">
+                                        <i class="ti-minus"></i>
+                                    </span>
+                                    <div class="top__day-item-left-body">
+                                        <div class="top__day-item-left-body-img">
+                                            <img src="./assets/img/top-6-date.jpg" alt="">
+                                            <div class="top__day-item-layout-2">
+                                                <i class="ti-control-play"></i>
+                                            </div>
+                                        </div>
+                                        <div class="top__day-item-left-body-name">
+                                            <h4>Sai Cách Yêu</h4>
+                                            <p>Lê Bảo Bình</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="top__day-item-center">
+                                    <span class="top__day-item-center-time">05:42</span>
+                                </div>
+                                <div class="top__day-item-right">
+                                    <div class="top__day-item-right-mic">
+                                        <i class="ti-microphone"></i>
+                                    </div>
+                                    <div class="top__day-item-right-heart">
+                                        <i class="ti-heart"></i>
+                                    </div>
+                                    <div class="top__day-item-right-more">
+                                        <i class="ti-more-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="top__day-item">
+                            <div class="top__day-item-layout-1">
+                                <div class="top__day-item-left">
+                                    <p class="top__day-item-left-num">7</p>
+                                    <span class="top__day-item-left-line">
+                                        <i class="ti-minus"></i>
+                                    </span>
+                                    <div class="top__day-item-left-body">
+                                        <div class="top__day-item-left-body-img">
+                                            <img src="./assets/img/top-7-date.jpg" alt="">
+                                            <div class="top__day-item-layout-2">
+                                                <i class="ti-control-play"></i>
+                                            </div>
+                                        </div>
+                                        <div class="top__day-item-left-body-name">
+                                            <h4>Em Hát Ai Nghe</h4>
+                                            <p>Orange</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="top__day-item-center">
+                                    <span class="top__day-item-center-time">04:39</span>
+                                </div>
+                                <div class="top__day-item-right">
+                                    <div class="top__day-item-right-mic">
+                                        <i class="ti-microphone"></i>
+                                    </div>
+                                    <div class="top__day-item-right-heart">
+                                        <i class="ti-heart"></i>
+                                    </div>
+                                    <div class="top__day-item-right-more">
+                                        <i class="ti-more-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="top__day-item">
+                            <div class="top__day-item-layout-1">
+                                <div class="top__day-item-left">
+                                    <p class="top__day-item-left-num">8</p>
+                                    <span class="top__day-item-left-line">
+                                        <i class="ti-minus"></i>
+                                    </span>
+                                    <div class="top__day-item-left-body">
+                                        <div class="top__day-item-left-body-img">
+                                            <img src="./assets/img/top-8-date.jpg" alt="">
+                                            <div class="top__day-item-layout-2">
+                                                <i class="ti-control-play"></i>
+                                            </div>
+                                        </div>
+                                        <div class="top__day-item-left-body-name">
+                                            <h4>Túp Lều Vàng</h4>
+                                            <p>Nguyễn Đình Vũ, ACV</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="top__day-item-center">
+                                    <span class="top__day-item-center-time">03:07</span>
+                                </div>
+                                <div class="top__day-item-right">
+                                    <div class="top__day-item-right-mic">
+                                        <i class="ti-microphone"></i>
+                                    </div>
+                                    <div class="top__day-item-right-heart">
+                                        <i class="ti-heart"></i>
+                                    </div>
+                                    <div class="top__day-item-right-more">
+                                        <i class="ti-more-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="top__day-item">
+                            <div class="top__day-item-layout-1">
+                                <div class="top__day-item-left">
+                                    <p class="top__day-item-left-num">9</p>
+                                    <span class="top__day-item-left-line">
+                                        <i class="ti-minus"></i>
+                                    </span>
+                                    <div class="top__day-item-left-body">
+                                        <div class="top__day-item-left-body-img">
+                                            <img src="./assets/img/top-9-date.jpg" alt="">
+                                            <div class="top__day-item-layout-2">
+                                                <i class="ti-control-play"></i>
+                                            </div>
+                                        </div>
+                                        <div class="top__day-item-left-body-name">
+                                            <h4>Em Hứa Thế Nào</h4>
+                                            <p>Như Việt, ACV</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="top__day-item-center">
+                                    <span class="top__day-item-center-time">04:25</span>
+                                </div>
+                                <div class="top__day-item-right">
+                                    <div class="top__day-item-right-mic">
+                                        <i class="ti-microphone"></i>
+                                    </div>
+                                    <div class="top__day-item-right-heart">
+                                        <i class="ti-heart"></i>
+                                    </div>
+                                    <div class="top__day-item-right-more">
+                                        <i class="ti-more-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="top__day-item">
+                            <div class="top__day-item-layout-1">
+                                <div class="top__day-item-left">
+                                    <div class="block__top-day-item-left-num">
+                                        <p class="top__day-item-left-num">10</p>
+                                    </div>
+                                    <span class="top__day-item-left-line">
+                                        <i class="ti-minus"></i>
+                                    </span>
+                                    <div class="top__day-item-left-body">
+                                        <div class="top__day-item-left-body-img">
+                                            <img src="./assets/img/top-10-date.jpg" alt="">
+                                            <div class="top__day-item-layout-2">
+                                                <i class="ti-control-play"></i>
+                                            </div>
+                                        </div>
+                                        <div class="top__day-item-left-body-name">
+                                            <h4>Nhắn Tới Khoảng Trời Em</h4>
+                                            <p>Quân A.P</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="top__day-item-center">
+                                    <span class="top__day-item-center-time">03:55</span>
+                                </div>
+                                <div class="top__day-item-right">
+                                    <div class="top__day-item-right-mic">
+                                        <i class="ti-microphone"></i>
+                                    </div>
+                                    <div class="top__day-item-right-heart">
+                                        <i class="ti-heart"></i>
+                                    </div>
+                                    <div class="top__day-item-right-more">
+                                        <i class="ti-more-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="top__day-see-more">
+                        <a class="top__day-see-more-link" href="">Xem Top 100</a>
+                    </div>
+                </div>
+                <div class="container__page-zingchart-top-week">
+                    <h3 class="top__week-heading">Bảng Xếp Hạng Tuần</h3>
+                    <div class="grid">
+                        <div class="row">
+                            <div class="col l-4 m-12 c-12">
+                                <div class="top__week-item">
+                                    <div class="top__week-item-heading">
+                                        <h4>Việt Nam</h4>
+                                        <span><i class="ti-control-play"></i></span>
+                                    </div>
+                                    <ul class="top__week-body-list">
+                                        <li class="top__week-body-item">
+                                            <div class="top__week-item-left">
+                                                <p class="top__week-item-left-num color-top-1">1</p>
+                                                <span class="top__week-item-left-line">
+                                                    <i class="ti-minus"></i>
+                                                </span>
+                                                <div class="top__week-item-left-body">
+                                                    <div class="top__week-item-left-body-img">
+                                                        <img src="./assets/img/top-1-date.jpg" alt="">
+                                                        <div class="top__week-item-layout-2">
+                                                            <i class="ti-control-play"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="top__week-item-left-body-name">
+                                                        <h4>Rồi Tới Luôn</h4>
+                                                        <p>Nal</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="top__week-item-right">
+                                                <div class="top__week-item-right-mic">
+                                                    <i class="ti-microphone"></i>
+                                                </div>
+                                                <div class="top__week-item-right-more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="top__week-body-item">
+                                            <div class="top__week-item-left">
+                                                <p class="top__week-item-left-num color-top-2">2</p>
+                                                <span class="top__week-item-left-line">
+                                                    <i class="ti-minus"></i>
+                                                </span>
+                                                <div class="top__week-item-left-body">
+                                                    <div class="top__week-item-left-body-img">
+                                                        <img src="./assets/img/top-3-date.jpg" alt="">
+                                                        <div class="top__week-item-layout-2">
+                                                            <i class="ti-control-play"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="top__week-item-left-body-name">
+                                                        <h4>Khuê Mộc Lan</h4>
+                                                        <p>Hương Ly, Jombie</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="top__week-item-right">
+                                                <div class="top__week-item-right-mic">
+                                                    <i class="ti-microphone"></i>
+                                                </div>
+                                                <div class="top__week-item-right-more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="top__week-body-item">
+                                            <div class="top__week-item-left">
+                                                <p class="top__week-item-left-num color-top-3">3</p>
+                                                <span class="top__week-item-left-line">
+                                                    <i class="ti-minus"></i>
+                                                </span>
+                                                <div class="top__week-item-left-body">
+                                                    <div class="top__week-item-left-body-img">
+                                                        <img src="./assets/img/top-6-date.jpg" alt="">
+                                                        <div class="top__week-item-layout-2">
+                                                            <i class="ti-control-play"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="top__week-item-left-body-name">
+                                                        <h4>Sai Cách Yêu</h4>
+                                                        <p>Lê Bảo Bình</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="top__week-item-right">
+                                                <div class="top__week-item-right-mic">
+                                                    <i class="ti-microphone"></i>
+                                                </div>
+                                                <div class="top__week-item-right-more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="top__week-body-item">
+                                            <div class="top__week-item-left">
+                                                <p class="top__week-item-left-num">4</p>
+                                                <span class="top__week-item-left-line">
+                                                    <i class="ti-minus"></i>
+                                                </span>
+                                                <div class="top__week-item-left-body">
+                                                    <div class="top__week-item-left-body-img">
+                                                        <img src="./assets/img/top-7-date.jpg" alt="">
+                                                        <div class="top__week-item-layout-2">
+                                                            <i class="ti-control-play"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="top__week-item-left-body-name">
+                                                        <h4>Em Hát Ai Nghe</h4>
+                                                        <p>Orange</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="top__week-item-right">
+                                                <div class="top__week-item-right-mic">
+                                                    <i class="ti-microphone"></i>
+                                                </div>
+                                                <div class="top__week-item-right-more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="top__week-body-item">
+                                            <div class="top__week-item-left">
+                                                <p class="top__week-item-left-num">5</p>
+                                                <span class="top__week-item-left-line">
+                                                    <i class="ti-minus"></i>
+                                                </span>
+                                                <div class="top__week-item-left-body">
+                                                    <div class="top__week-item-left-body-img">
+                                                        <img src="./assets/img/top-2-date.jpg" alt="">
+                                                        <div class="top__week-item-layout-2">
+                                                            <i class="ti-control-play"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="top__week-item-left-body-name">
+                                                        <h4>Người Lạ Thoáng Qua</h4>
+                                                        <p>Đinh Tùng Huy</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="top__week-item-right">
+                                                <div class="top__week-item-right-mic">
+                                                    <i class="ti-microphone"></i>
+                                                </div>
+                                                <div class="top__week-item-right-more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="top__week-see-more">
+                                        <a class="top__week-see-more-link" href="">Xem tất cả</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-4 m-12 c-12">
+                                <div class="top__week-item">
+                                    <div class="top__week-item-heading">
+                                        <h4>US-UK</h4>
+                                        <span><i class="ti-control-play"></i></span>
+                                    </div>
+                                    <ul class="top__week-body-list">
+                                        <li class="top__week-body-item">
+                                            <div class="top__week-item-left">
+                                                <p class="top__week-item-left-num color-top-1">1</p>
+                                                <span class="top__week-item-left-line">
+                                                    <i class="ti-minus"></i>
+                                                </span>
+                                                <div class="top__week-item-left-body">
+                                                    <div class="top__week-item-left-body-img">
+                                                        <img src="./assets/img/us_uk1.jpg" alt="">
+                                                        <div class="top__week-item-layout-2">
+                                                            <i class="ti-control-play"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="top__week-item-left-body-name">
+                                                        <h4>STAY</h4>
+                                                        <p>Justin Bieber</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="top__week-item-right">
+                                                <div class="top__week-item-right-mic">
+                                                    <i class="ti-microphone"></i>
+                                                </div>
+                                                <div class="top__week-item-right-more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="top__week-body-item">
+                                            <div class="top__week-item-left">
+                                                <p class="top__week-item-left-num color-top-2">2</p>
+                                                <span class="top__week-item-left-line">
+                                                    <i class="ti-minus"></i>
+                                                </span>
+                                                <div class="top__week-item-left-body">
+                                                    <div class="top__week-item-left-body-img">
+                                                        <img src="./assets/img/us_uk2.jpg" alt="">
+                                                        <div class="top__week-item-layout-2">
+                                                            <i class="ti-control-play"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="top__week-item-left-body-name">
+                                                        <h4>Good 4 u</h4>
+                                                        <p>Olivia Rodrigo</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="top__week-item-right">
+                                                <div class="top__week-item-right-mic">
+                                                    <i class="ti-microphone"></i>
+                                                </div>
+                                                <div class="top__week-item-right-more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="top__week-body-item">
+                                            <div class="top__week-item-left">
+                                                <p class="top__week-item-left-num color-top-3">3</p>
+                                                <span class="top__week-item-left-line">
+                                                    <i class="ti-minus"></i>
+                                                </span>
+                                                <div class="top__week-item-left-body">
+                                                    <div class="top__week-item-left-body-img">
+                                                        <img src="./assets/img/us_uk3.jpg" alt="">
+                                                        <div class="top__week-item-layout-2">
+                                                            <i class="ti-control-play"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="top__week-item-left-body-name">
+                                                        <h4>Kiss Me More</h4>
+                                                        <p>Doja Cat, SZA</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="top__week-item-right">
+                                                <div class="top__week-item-right-mic">
+                                                    <i class="ti-microphone"></i>
+                                                </div>
+                                                <div class="top__week-item-right-more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="top__week-body-item">
+                                            <div class="top__week-item-left">
+                                                <p class="top__week-item-left-num">4</p>
+                                                <span class="top__week-item-left-line">
+                                                    <i class="ti-minus"></i>
+                                                </span>
+                                                <div class="top__week-item-left-body">
+                                                    <div class="top__week-item-left-body-img">
+                                                        <img src="./assets/img/us_uk4.jpg" alt="">
+                                                        <div class="top__week-item-layout-2">
+                                                            <i class="ti-control-play"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="top__week-item-left-body-name">
+                                                        <h4>INDUSTRY BABY</h4>
+                                                        <p>Lil Nas X</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="top__week-item-right">
+                                                <div class="top__week-item-right-mic">
+                                                    <i class="ti-microphone"></i>
+                                                </div>
+                                                <div class="top__week-item-right-more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="top__week-body-item">
+                                            <div class="top__week-item-left">
+                                                <p class="top__week-item-left-num">5</p>
+                                                <span class="top__week-item-left-line">
+                                                    <i class="ti-minus"></i>
+                                                </span>
+                                                <div class="top__week-item-left-body">
+                                                    <div class="top__week-item-left-body-img">
+                                                        <img src="./assets/img/us_uk5.jpg" alt="">
+                                                        <div class="top__week-item-layout-2">
+                                                            <i class="ti-control-play"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="top__week-item-left-body-name">
+                                                        <h4>Butter</h4>
+                                                        <p>BTS</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="top__week-item-right">
+                                                <div class="top__week-item-right-mic">
+                                                    <i class="ti-microphone"></i>
+                                                </div>
+                                                <div class="top__week-item-right-more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="top__week-see-more">
+                                        <a class="top__week-see-more-link" href="">Xem tất cả</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-4 m-12 c-12">
+                                <div class="top__week-item">
+                                    <div class="top__week-item-heading">
+                                        <h4>K-POP</h4>
+                                        <span><i class="ti-control-play"></i></span>
+                                    </div>
+                                    <ul class="top__week-body-list">
+                                        <li class="top__week-body-item">
+                                            <div class="top__week-item-left">
+                                                <p class="top__week-item-left-num color-top-1">1</p>
+                                                <span class="top__week-item-left-line">
+                                                    <i class="ti-minus"></i>
+                                                </span>
+                                                <div class="top__week-item-left-body">
+                                                    <div class="top__week-item-left-body-img">
+                                                        <img src="./assets/img/k_pop1.jpg" alt="">
+                                                        <div class="top__week-item-layout-2">
+                                                            <i class="ti-control-play"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="top__week-item-left-body-name">
+                                                        <h4>DUMB DUMB</h4>
+                                                        <p>SOMI</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="top__week-item-right">
+                                                <div class="top__week-item-right-mic">
+                                                    <i class="ti-microphone"></i>
+                                                </div>
+                                                <div class="top__week-item-right-more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="top__week-body-item">
+                                            <div class="top__week-item-left">
+                                                <p class="top__week-item-left-num color-top-2">2</p>
+                                                <span class="top__week-item-left-line">
+                                                    <i class="ti-minus"></i>
+                                                </span>
+                                                <div class="top__week-item-left-body">
+                                                    <div class="top__week-item-left-body-img">
+                                                        <img src="./assets/img/k_pop2.png" alt="">
+                                                        <div class="top__week-item-layout-2">
+                                                            <i class="ti-control-play"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="top__week-item-left-body-name">
+                                                        <h4>Queendom</h4>
+                                                        <p>Reb Velvet</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="top__week-item-right">
+                                                <div class="top__week-item-right-mic">
+                                                    <i class="ti-microphone"></i>
+                                                </div>
+                                                <div class="top__week-item-right-more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="top__week-body-item">
+                                            <div class="top__week-item-left">
+                                                <p class="top__week-item-left-num color-top-3">3</p>
+                                                <span class="top__week-item-left-line">
+                                                    <i class="ti-minus"></i>
+                                                </span>
+                                                <div class="top__week-item-left-body">
+                                                    <div class="top__week-item-left-body-img">
+                                                        <img src="./assets/img/k_pop3.jpg" alt="">
+                                                        <div class="top__week-item-layout-2">
+                                                            <i class="ti-control-play"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="top__week-item-left-body-name">
+                                                        <h4>SPICY</h4>
+                                                        <p>CL</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="top__week-item-right">
+                                                <div class="top__week-item-right-mic">
+                                                    <i class="ti-microphone"></i>
+                                                </div>
+                                                <div class="top__week-item-right-more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="top__week-body-item">
+                                            <div class="top__week-item-left">
+                                                <p class="top__week-item-left-num">4</p>
+                                                <span class="top__week-item-left-line">
+                                                    <i class="ti-minus"></i>
+                                                </span>
+                                                <div class="top__week-item-left-body">
+                                                    <div class="top__week-item-left-body-img">
+                                                        <img src="./assets/img/k_pop4.jpg" alt="">
+                                                        <div class="top__week-item-layout-2">
+                                                            <i class="ti-control-play"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="top__week-item-left-body-name">
+                                                        <h4>You can't sit with us</h4>
+                                                        <p>Sunmi</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="top__week-item-right">
+                                                <div class="top__week-item-right-mic">
+                                                    <i class="ti-microphone"></i>
+                                                </div>
+                                                <div class="top__week-item-right-more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="top__week-body-item">
+                                            <div class="top__week-item-left">
+                                                <p class="top__week-item-left-num">5</p>
+                                                <span class="top__week-item-left-line">
+                                                    <i class="ti-minus"></i>
+                                                </span>
+                                                <div class="top__week-item-left-body">
+                                                    <div class="top__week-item-left-body-img">
+                                                        <img src="./assets/img/k_pop5.jpg" alt="">
+                                                        <div class="top__week-item-layout-2">
+                                                            <i class="ti-control-play"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="top__week-item-left-body-name">
+                                                        <h4>Butter</h4>
+                                                        <p>BTS</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="top__week-item-right">
+                                                <div class="top__week-item-right-mic">
+                                                    <i class="ti-microphone"></i>
+                                                </div>
+                                                <div class="top__week-item-right-more">
+                                                    <i class="ti-more-alt"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="top__week-see-more">
+                                        <a class="top__week-see-more-link" href="">Xem tất cả</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__page-follow container-page">
+                <div class="nav__page-follow">
+                    <ul class="nav__page-follow-list">
+                        <li class="nav__page-follow-item active">
+                            <span>VIỆT NAM</span>
+                        </li>
+                        <li class="nav__page-follow-item">
+                            <span>US-UK</span>
+                        </li>
+                        <li class="nav__page-follow-item">
+                            <span>K-POP</span>
+                        </li>
+                        <li class="nav__page-follow-item">
+                            <span>HOA NGỮ</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="page__follow-vn page__follow active">
+                    <div class="page__follow-slide">
+                        <div class="swiper mySwiper-2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="grid">
+                                        <div class="row no-gutter">
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide1.png" alt="" class="follow__slide-img">
+                                            </div>
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide2.png" alt="" class="follow__slide-img">
+                                            </div>
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide3.png" alt="" class="follow__slide-img">
+                                            </div>
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide7.png" alt="" class="follow__slide-img">
+                                            </div>
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide4.png" alt="" class="follow__slide-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="grid">
+                                        <div class="row no-gutter">
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide6.png" alt="" class="follow__slide-img">
+                                            </div>
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide7.png" alt="" class="follow__slide-img">
+                                            </div>
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide8.png" alt="" class="follow__slide-img">
+                                            </div>
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide13.png" alt="" class="follow__slide-img">
+                                            </div>
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide9.png" alt="" class="follow__slide-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="grid">
+                                        <div class="row no-gutter">
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide10.png" alt="" class="follow__slide-img">
+                                            </div>
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide11.png" alt="" class="follow__slide-img">
+                                            </div>
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide12.png" alt="" class="follow__slide-img">
+                                            </div>
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide13.png" alt="" class="follow__slide-img">
+                                            </div>
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide14.png" alt="" class="follow__slide-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="grid">
+                                        <div class="row no-gutter">
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide15.png" alt="" class="follow__slide-img">
+                                            </div>
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide2.png" alt="" class="follow__slide-img">
+                                            </div>
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide9.png" alt="" class="follow__slide-img">
+                                            </div>
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide7.png" alt="" class="follow__slide-img">
+                                            </div>
+                                            <div class="col l-2-4 m-4 col-follow">
+                                                <img src="./assets/img/f_slide5.png" alt="" class="follow__slide-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <div class="page__follow-vn-blog">
+                        <div class="grid">
+                            <div class="row">
+                                <div class="col l-4 m-4 vn-cot-1">
+
+                                </div>
+                                <div class="col l-4 m-4 vn-cot-2">
+                                    
+                                </div>
+                                <div class="col l-4 m-4 vn-cot-3">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page__follow-us page__follow">
+                    <div class="page__follow-us-blog">
+                        <div class="grid">
+                            <div class="row">
+                                <div class="col l-4 m-4 us-cot-1">
+                                   
+                                </div>
+                                <div class="col l-4 m-4 us-cot-2">
+                                    
+                                </div>
+                                <div class="col l-4 m-4 us-cot-3">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page__follow-k page__follow">
+                    <div class="page__follow-k-blog">
+                        <div class="grid">
+                            <div class="row">
+                                <div class="col l-4 m-4 k-cot-1">
+                                   
+                                </div>
+                                <div class="col l-4 m-4 k-cot-2">
+                                    
+                                </div>
+                                <div class="col l-4 m-4 k-cot-3">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page__follow-cn page__follow">
+                    <div class="page__follow-cn-blog">
+                        <div class="grid">
+                            <div class="row">
+                                <div class="col l-4 m-4 cn-cot-1">
+                                   
+                                </div>
+                                <div class="col l-4 m-4 cn-cot-2">
+                                    
+                                </div>
+                                <div class="col l-4 m-4 cn-cot-3">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__page-message container-page">
+                <p>Trang web hiện tại chưa được hoàn thiện, bạn vui lòng thông cảm</p>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="dashboard">
+                <!-- CD -->
+                <div class="form-cd">
+                    <div class="cd">
+                        <div class="cd-thumb" style="background-image: url(./assets/img/song1.jpg)">
+                            <div class="cd-nodes-list">
+                                <span class="cd-node node-1">♫</span>
+                                <span class="cd-node node-2">♪</span>
+                                <span class="cd-node node-3">♭</span>
+                                <span class="cd-node node-4">♫</span>
+                                <span class="cd-node node-5">♪</span>
+                                <span class="cd-node node-6">♭</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cd-heading">
+                        <h2>String 57th & 9th</h2>
+                        <h4>Now playing:</h4>
+                    </div>
+                </div>
+
+                <!-- Control -->
+                <div class="form-control">
+                    <div class="control">
+                        <div class="btn-repeat">
+                            <i class="ti-loop"></i>
+                        </div>
+                        <div class="btn-prev">
+                            <i class="ti-control-skip-backward"></i>
+                        </div>
+                        <div class="btn-toggle-play">
+                            <i class="ti-control-pause icon-pause"></i>
+                            <i class="ti-control-play icon-play"></i>
+                        </div>
+                        <div class="btn-next">
+                            <i class="ti-control-skip-forward"></i>
+                        </div>
+                        <div class="btn-random">
+                            <i class="ti-control-shuffle"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-progress">
+                        <span class="time-left">00.00</span>
+                        <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+                        <span class="time-right">00.00</span>
+                    </div>
+
+                    <audio id="audio" src=""></audio>
+                </div>
+
+                <div class="form-volume">
+                    <ul class="form__volume-list">
+                        <li class="form__volume-item form__volume-item--mv">
+                            <i class="ti-video-clapper"></i>
+                        </li>
+                        <li class="form__volume-item form__volume-item--mic">
+                            <i class="ti-microphone"></i>
+                        </li>
+                        <li class="form__volume-item form__volume-item--progress">
+                            <div class="form__volume--icon">
+                                <i class="ti-volume"></i>
+                            </div>
+                            <input type="range" class="progress-volume" value="50" step="1" min="0" max="100">
+                        </li>
+                        <li class="form__volume-item form__volume-item--line"></li>
+                        <li class="form__volume-item form__volume-item--list">
+                            <i class="ti-view-list-alt"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <span class="playing_zoom-out">
+                <i class="ti-angle-down"></i>
+            </span>
+        </div>
+    </div>
+    <div class="theme__modal">
+        <div class="theme__modal-container">
+            <div class="theme__modal-container-close">
+                <i class="ti-close"></i>
+            </div>
+            <div class="theme__modal-container-header">
+                <h3>Giao Diện</h3>
+            </div>
+            <div class="theme__modal-container-body">
+                <div class="theme__modal-body-item">
+                    <img src="https://zmp3-static.zadn.vn/skins/zmp3-v6.1/images/theme/dark.jpg" alt=""
+                        class="theme__modal-body-item-img">
+                    <div class="theme__modal-body-item-sub">
+                        <div class="btn modal__item-sub-btn-apply">
+                            <span>ÁP DỤNG</span>
+                        </div>
+                        <div class="btn modal__item-sub-btn-view">
+                            <span>XEM TRƯỚC</span>
+                        </div>
+                    </div>
+                    <span class="modal__btn-true">
+                        <i class="ti-check"></i>
+                    </span>
+                    <br><span class="theme__modal-body-item-name">Tối</span>
+                </div>
+                <div class="theme__modal-body-item active">
+                    <img src="https://zmp3-static.zadn.vn/skins/zmp3-v6.1/images/theme/purple.jpg" alt=""
+                        class="theme__modal-body-item-img">
+                    <div class="theme__modal-body-item-sub">
+                        <div class="btn modal__item-sub-btn-apply">
+                            <span>ÁP DỤNG</span>
+                        </div>
+                        <div class="btn modal__item-sub-btn-view">
+                            <span>XEM TRƯỚC</span>
+                        </div>
+                    </div>
+                    <span class="modal__btn-true">
+                        <i class="ti-check"></i>
+                    </span>
+                    <br><span class="theme__modal-body-item-name">Tím</span>
+                </div>
+                <div class="theme__modal-body-item">
+                    <img src="https://zmp3-static.zadn.vn/skins/zmp3-v6.1/images/theme/green.jpg" alt=""
+                        class="theme__modal-body-item-img"><br>
+                    <span class="theme__modal-body-item-name">Xanh Lá</span>
+                    <div class="theme__modal-body-item-sub">
+                        <div class="btn modal__item-sub-btn-apply">
+                            <span>ÁP DỤNG</span>
+                        </div>
+                        <div class="btn modal__item-sub-btn-view">
+                            <span>XEM TRƯỚC</span>
+                        </div>
+                    </div>
+                    <span class="modal__btn-true">
+                        <i class="ti-check"></i>
+                    </span>
+                </div>
+                <div class="theme__modal-body-item">
+                    <img src="https://zmp3-static.zadn.vn/skins/zmp3-v6.1/images/theme/blue-light.jpg" alt=""
+                        class="theme__modal-body-item-img"><br>
+                    <span class="theme__modal-body-item-name">Xanh Biển</span>
+                    <div class="theme__modal-body-item-sub">
+                        <div class="btn modal__item-sub-btn-apply">
+                            <span>ÁP DỤNG</span>
+                        </div>
+                        <div class="btn modal__item-sub-btn-view">
+                            <span>XEM TRƯỚC</span>
+                        </div>
+                    </div>
+                    <span class="modal__btn-true">
+                        <i class="ti-check"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="playing_on-mobile">
+        <div class="m_form-cd-img" style="background-image: url(./assets/img/song1.jpg)"></div>
+        <div class="m_form-desc">
+            <h2>String 57th & 9th</h2>
+            <h4>Now playing: </h4>
+        </div>
+        <div class="m_form-control">
+            <div class="btn-prev-on-mobile">
+                <i class="ti-control-skip-backward"></i>
+            </div>
+            <div class="btn-toggle-play-on-mobile">
+                <i class="ti-control-pause icon-pause"></i>
+                <i class="ti-control-play icon-play"></i>
+            </div>
+            <div class="btn-next-on-mobile">
+                <i class="ti-control-skip-forward"></i>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper-1", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper-2", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['21:00', '00:00', '03:00', '06:00', '09:00', '12:00', '15:00', '18:00'],
+                datasets: [{
+                    label: 'Rồi Tới Luôn',
+                    data: [14, 16, 17, 15, 13, 16, 19, 16],
+                    backgroundColor: [
+                        'rgb(227, 80, 80)',
+                    ],
+                    borderColor: [
+                        'rgb(227, 80, 80)',
+                    ],
+                    borderWidth: 1
+                },
+                {
+                    label: 'Khuê Mộc Lan',
+                    data: [24, 26, 18, 16, 19, 18, 26, 25],
+                    backgroundColor: [
+                        'rgb(80, 227, 194)',
+                    ],
+                    borderColor: [
+                        'rgb(80, 227, 194)',
+                    ],
+                    borderWidth: 1
+                },
+                {
+                    label: 'Yêu Là Cưới',
+                    data: [21, 23, 19, 17, 20, 25, 29, 27],
+                    backgroundColor: [
+                        'rgb(74, 144, 226)',
+                    ],
+                    borderColor: [
+                        'rgb(74, 144, 226)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        callbacks: {
+                            title: function (item, everything) {
+                                return;
+                            },
+                            label: function (item, everything) {
+                                let name = item.dataset.label;
+                                let phantram = item.formattedValue;
+                                let label = name + ' ' + phantram + '%';
+                                return label;
+                            }
+                        },
+                        bodyAlign: 'center',
+                    },
+                },
+                elements: {
+                    line: {
+                        tension: 0.3,
+                    }
+                },
+                scales: {
+                    yAxes: {
+                        beginAtZero: true,
+                        ticks: {
+                            display: false,
+                        },
+                        grid: {
+                            color: "rgba(255, 255, 255, 0.1)",
+                        }
+                    },
+                    xAxes: {
+                        grid: {
+                            color: "rgba(0, 0, 0, 0)",
+                        }
+                    },
+                }
+            }
+        });
+    </script>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
